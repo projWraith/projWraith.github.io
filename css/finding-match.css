@@ -1,0 +1,257 @@
+body {
+	background: #000;
+}
+
+a {
+	text-decoration: none;
+}
+
+.greenAccent {
+	color: #32ca9a;
+}
+
+#mobileScreen {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow: hidden;
+	border: solid 1px #808080;
+}
+
+#adContainer {
+	width: 355px;
+	height: 628px;
+	margin: auto;
+	position: relative;
+	top: 25px;
+	display: none;
+}
+
+#adContainer img {
+	max-width: 100%;
+	height: auto;
+}
+
+#adClose {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 13px;
+	font-weight: lighter;
+	letter-spacing: 6px;
+	text-align: center;
+	position: relative;
+	top: 16px;
+}
+
+#logoContainer {
+	width: auto;
+	height: 35px;
+	position: relative;
+	left: 180px;
+	top: 20px;
+
+}
+
+#logoContainer img {
+	max-height: 100%;
+	width: auto;
+	margin: auto;
+}
+
+#inner img {
+	width: 100px;
+	height: auto;
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 75px;
+}
+
+@-webkit-keyframes pulse {
+  0% { box-shadow:0 0 4px #32ca9a, inset 0 0 4px #32ca9a;}
+  40% { box-shadow:0 0 6px #32ca9a, inset 0 0 6px #32ca9a; }
+  16% { box-shadow:0 0 8px #32ca9a, inset 0 0 8px #32ca9a;}
+  48% { box-shadow:0 0 16px #32ca9a, inset 0 0 14px #32ca9a; }
+  80% { box-shadow:0 0 8px #32ca9a, inset 0 0 8px #32ca9a;}
+  40% { box-shadow:0 0 6px #32ca9a, inset 0 0 6px #32ca9a; }
+  100% { box-shadow:0 0 4px #32ca9a, inset 0 0 4px #32ca9a; }
+}
+
+#inner {
+  background-color:transparent;
+  width:225px;
+  height:225px;
+  border-radius:300px;
+  box-shadow: 0 0 8px #32ca9a, inset 0 0 8px #32ca9a;
+  -webkit-animation: pulse 2s linear 1s infinite;
+  margin-left: 93px;
+  margin-top: 66px;
+}
+
+#numberContainer {
+	width: 175px;
+	height: 100px;
+	margin: auto;
+	position: relative;
+	top: 82px;
+}
+
+#number {
+	font-size: 50px;
+	color: #fff;
+	font-family: "Avenir Next";
+	text-align: center;
+	letter-spacing: 5px;
+	font-weight: lighter;
+	text-shadow: 4px 4px 30px #fff, 4px 4px 30px #fff, 4px 4px 30px #fff;
+}
+
+
+#bigContainer {
+	margin-top: 50px;
+}
+
+
+#textContainer1 {
+	width: 300px;
+	height: auto;
+	margin: auto;
+}
+
+
+#textContainer1 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer2 {
+	width: 300px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+
+#textContainer2 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer3 {
+	width: 300px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+#textContainer3 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer4 {
+	width: 300px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+#textContainer4 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer5 {
+	width: 300px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+#textContainer5 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer6 {
+	width: 365px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+#textContainer6 h1 {
+	font-family: "Avenir Next";
+	color: #ffffff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#textContainer7 {
+	width: 350px;
+	height: auto;
+	margin: auto;
+	opacity: 0;
+}
+
+#textContainer7 h1 {
+	font-family: "Avenir Next";
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 10px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#continueButton {
+	width: 325px;
+	height: 50px;
+	border: 1px solid #f24154;
+	margin: auto;
+	position: relative;
+	top: 125px;
+	opacity: 0;
+}
+
+#continueButton h2 {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	font-weight: lighter;
+	letter-spacing: 14px;
+	position: relative;
+	top: 8px;
+	left: 78px;
+}
+
+
+
+
+
+
+
+
+

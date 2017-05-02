@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<link rel = "stylesheet" type = "text/css" href = "css/questionnaire.css">
+
+		<script type = "text/javascript">
+
+			function firstStageContinue() {
+				document.getElementById('firstSection').style.display = "none";
+				document.getElementById('continueButton').style.display = "none";
+				document.getElementById('secondSection').style.display = "block";
+				document.getElementById('continueButton2').style.display = "block";
+			}
+
+			function secondStageContinue() {
+				document.getElementById('secondSection').style.display = "none";
+				document.getElementById('continueButton2').style.display = "none";
+				document.getElementById('sexContainer').style.display = "block";
+				document.getElementById('interestContainer').style.display = "block";
+				document.getElementById('continueButton3').style.display = "block";
+			}
+
+			function clickMale() {
+				document.getElementById('maleText').style.color = "#32ca9a";
+				document.getElementById('femaleText').style.color = "#fff";
+				document.getElementById('nonBinaryText').style.color = "#fff";
+			}
+
+			function clickFemale() {
+				document.getElementById('femaleText').style.color = "#32ca9a";
+				document.getElementById('maleText').style.color = "#fff";
+				document.getElementById('nonBinaryText').style.color = "#fff";
+			}
+
+			function clickNonBinary() {
+				document.getElementById('nonBinaryText').style.color = "#32ca9a";
+				document.getElementById('maleText').style.color = "#fff";
+				document.getElementById('femaleText').style.color = "#fff";
+			}
+
+			function clickMen() {
+				document.getElementById('menText').style.color = "#32ca9a";
+				document.getElementById('womenText').style.color = "#fff";
+				document.getElementById('bothText').style.color = "#fff";
+				document.getElementById("nextPage").href = "findingmatch-samuel.html";
+			}
+
+			function clickWomen() {
+				document.getElementById('womenText').style.color = "#32ca9a";
+				document.getElementById('menText').style.color = "#fff";
+				document.getElementById('bothText').style.color = "#fff";
+				document.getElementById("nextPage").href = "findingmatch-samantha.html";
+			}
+
+			function clickBoth() {
+				document.getElementById('bothText').style.color = "#32ca9a";
+				document.getElementById('menText').style.color = "#fff";
+				document.getElementById('womenText').style.color = "#fff";
+				document.getElementById("nextPage").href = "findingmatch-samantha.html";
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id = "mobileScreen">
+
+			<div id = "headerBar">
+				<img src = "img/mosaic-logo.png"/>
+			</div>
+
+			<div id = "firstStage">
+
+				<div id = "videoContainer">
+					<iframe width="533" height="300" src="https://www.youtube.com/embed/JAxaPkxllsA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+				<form name = "frm" id = "firstSection">
+					<input class = "inputWidth" name = "name" type = "text" placeholder = "FULL NAME"><br>
+					<input class = "inputWidth" name = "birth" type = "text" placeholder = "BIRTH DATE (YYYY/MM/DD)"><br>
+					<input class = "inputWidth" name = "country" type = "text" placeholder = "COUNTRY OF ORIGIN"><br>
+					<input class = "inputWidth" name = "height" type = "text" placeholder = "HEIGHT"><br>
+					<input class = "inputWidth" name = "eye" type = "text" placeholder = "EYE COLOUR"><br>
+				</form>
+
+				<form name = "frm2" id = "secondSection">
+					<input class = "inputWidth2" name = "happy" type = "text" placeholder = "ARE YOU HAPPY?"><br>
+					<input class = "inputWidth2" name = "love" type = "text" placeholder = "HAVE YOU EVER BEEN IN LOVE?"><br>
+					<input class = "inputWidth2" name = "heart" type = "text" placeholder = "IS THERE FEAR IN YOUR HEART?"><br>
+					<input class = "inputWidth2" name = "alone" type = "text" placeholder = "ARE YOU TIRED OF BEING ALONE?"><br>
+					<input class = "inputWidth2" name = "forever" type = "text" placeholder = "DO YOU WANT TO LIVE FOREVER?"><br>
+				</form>
+
+				<div id = "sexContainer">
+					<h1>I AM A</h1>
+					<a OnClick = "clickMale()"><div class = "sexOptionContainer"><p id="maleText">M A L E</p></div></a>
+					<a OnClick = "clickFemale()"><div id = "femaleOption" class = "sexOptionContainer"><p id="femaleText">F E M A L E</p></div></a>
+					<a OnClick = "clickNonBinary()"><div id = "nonBinaryOption" class = "sexOptionContainer"><p id ="nonBinaryText">N O N - B I N A R Y</p></div></a>
+				</div>
+
+				<div id = "interestContainer">
+					<h1>LOOKING FOR</h1>
+					<a OnClick="clickMen()"><div class = "interestOptionContainer"><p id="menText">M E N</p></div></a>
+					<a OnClick="clickWomen()"><div id = "womenOption" class = "interestOptionContainer"><p id="womenText">W O M E N</p></div></a>
+					<a OnClick="clickBoth()"><div id = "bothOption" class = "interestOptionContainer"><p id="bothText">B O T H</p></div></a>
+				</div>
+
+			</div>
+
+			<a OnClick = "firstStageContinue()"><div id = "continueButton"/><h2>CONTINUE</h2></div></a>
+
+			<a OnClick = "secondStageContinue()"><div id = "continueButton2"/><h2>CONTINUE</h2></div></a>
+
+			<a id = "nextPage" href = ""><div id = "continueButton3"/><h2>CONTINUE</h2></div></a>
+
+		</div>
+
+	</body>
+
+</html>

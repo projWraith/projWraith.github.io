@@ -1,0 +1,85 @@
+body {
+	background: #000;
+}
+
+a {
+	text-decoration: none;
+}
+
+#mobileScreen {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow: hidden;
+	border: solid 1px #808080;
+}
+
+#homeImage {
+	opacity: 0.15;
+	position: relative;
+	width: auto;
+	max-height: 115%;
+	bottom: 119px;
+	right: 64px;
+}
+
+#mosaicLogo {
+	width: 200px;
+	height: auto;
+	position: relative;
+	bottom: 755px;
+	left: 108px;
+	opacity: 0.8;
+}
+
+#sloganContainer {
+	width: 200px;
+	height: auto;
+	position: relative;
+	bottom: 735px;
+	left: 108px;
+	border-top: solid 1px #32ca9a;
+}
+
+#sloganContainer h1 {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #fff;
+	text-align: justify;
+	letter-spacing: 17px;
+	font-size: 29px;
+	padding-bottom: 15px;
+	border-bottom: solid 1px #32ca9a;
+}
+
+#beginButton {
+	width: 200px;
+	height: 50px;
+	border: solid 1px #f24154;
+	position: relative;
+	bottom: 461px;
+	left: 108px;
+}
+
+#beginButton h2 {
+	font-family: "Avenir Next";
+	font-size: 12px;
+	font-weight: lighter;
+	letter-spacing: 17px;
+	color: #fff;
+	position: relative;
+	top: 7px;
+	left: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+

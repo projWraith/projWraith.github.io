@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+
+	<head>
+
+		<link rel = "stylesheet" type = "text/css" href = "css/theme.css">
+
+		<script type = "text/javascript">
+
+			function changeToBio () {
+				document.getElementById('bioContainer').style.display = "inline";
+				document.getElementById('postContainer').style.display = "none";
+				document.getElementById('photoContainer').style.display = "none";
+				document.getElementById('bioLine').style.display = "inherit";
+				document.getElementById('postLine').style.display = "none";
+				document.getElementById('cameraLine').style.display = "none";
+			}
+
+			function changeToCamera () {
+				document.getElementById('bioContainer').style.display = "none";
+				document.getElementById('postContainer').style.display = "none";
+				document.getElementById('photoContainer').style.display = "inline";
+				document.getElementById('bioLine').style.display = "none";
+				document.getElementById('postLine').style.display = "none";
+				document.getElementById('cameraLine').style.display = "inherit";
+			}
+
+			function changeToPosts () {
+				document.getElementById('bioContainer').style.display = "none";
+				document.getElementById('postContainer').style.display = "inline";
+				document.getElementById('photoContainer').style.display = "none";
+				document.getElementById('bioLine').style.display = "none";
+				document.getElementById('postLine').style.display = "inherit";
+				document.getElementById('cameraLine').style.display = "none";
+			}
+
+			function changeImageOne() {
+
+				document.getElementById('featuredImage').src = 'img/pic-one.jpg';
+				document.getElementById('picOneIcon').style.opacity = "1";
+				document.getElementById('picTwoIcon').style.opacity = "0.35";
+				document.getElementById('picThreeIcon').style.opacity = "0.35";
+			}
+
+			function changeImageTwo() {
+
+				document.getElementById('featuredImage').src = 'img/pic-two.jpg';
+				document.getElementById('picTwoIcon').style.opacity = "1";
+				document.getElementById('picOneIcon').style.opacity = "0.35";
+				document.getElementById('picThreeIcon').style.opacity = "0.35";
+			}
+
+			function changeImageThree() {
+
+				document.getElementById('featuredImage').src = 'img/pic-three.jpg';
+				document.getElementById('picThreeIcon').style.opacity = "1";
+				document.getElementById('picOneIcon').style.opacity = "0.35";
+				document.getElementById('picTwoIcon').style.opacity = "0.35";
+			}
+
+			function nextPost() {
+
+				if (document.getElementById("postBodyText").innerHTML == "That quote has nothing to do with me. Just find it interesting. Move it along folks! [ 25 MIN AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "There are two tragedies in life. One is to lose your heart's desire. The other is to gain it. [ 30 MIN AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+				}
+
+				else if (document.getElementById("postBodyText").innerHTML == "There are two tragedies in life. One is to lose your heart's desire. The other is to gain it. [ 30 MIN AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "Planning a nostalgia trip, but I'm never coming back. [ 8 HOURS AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+				}
+
+				else if (document.getElementById("postBodyText").innerHTML == "Planning a nostalgia trip, but I'm never coming back. [ 8 HOURS AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "People used to visit coral reefs for fun. [ 2 DAYS AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+				}
+
+				else if (document.getElementById("postBodyText").innerHTML == "People used to visit coral reefs for fun. [ 2 DAYS AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "Something's better than nothing. [ 3 DAYS AGO ]";
+					document.getElementById("postNext").style.color = "#808080";
+					document.getElementById("postPrev").style.color = "#fff";
+				}
+
+			}
+
+			function prevPost() {
+
+				if (document.getElementById("postBodyText").innerHTML == "There are two tragedies in life. One is to lose your heart's desire. The other is to gain it. [ 30 MIN AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "That quote has nothing to do with me. Just find it interesting. Move it along folks! [ 25 MIN AGO ]";
+					document.getElementById("postPrev").style.color = "#808080";
+					document.getElementById("postNext").style.color = "#fff";
+				}
+
+
+				else if (document.getElementById("postBodyText").innerHTML == "Planning a nostalgia trip, but I'm never coming back. [ 8 HOURS AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "There are two tragedies in life. One is to lose your heart's desire. The other is to gain it. [ 30 MIN AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+					document.getElementById("postNext").style.color = "#fff";
+				}
+
+
+				else if (document.getElementById("postBodyText").innerHTML == "People used to visit coral reefs for fun. [ 2 DAYS AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "Planning a nostalgia trip, but I'm never coming back. [ 8 HOURS AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+					document.getElementById("postNext").style.color = "#fff";
+				}
+
+
+				else if (document.getElementById("postBodyText").innerHTML == "Something's better than nothing. [ 3 DAYS AGO ]"){
+					document.getElementById("postBodyText").innerHTML = "People used to visit coral reefs for fun. [ 2 DAYS AGO ]";
+					document.getElementById("postPrev").style.color = "#fff";
+					document.getElementById("postNext").style.color = "#fff";
+				}
+
+			}
+
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div id = "mobileScreen">
+
+			<div id = "headerBar">
+				<img src = "img/mosaic-logo.png"/>
+			</div>
+
+			<div id = "mainPicture">
+				<img id = "featuredImage" src = "img/pic-one.jpg"/>
+			</div>
+
+			<div id = "iconBar">
+				<a href = "#messageButton" OnClick = "changeToBio()">
+					<div id = "bioIconContainer">
+						<img id = "bioIcon" src ="img/biography-icon.png"/>
+					</div>
+				</a>
+
+				<a href = "#messageButton" OnClick = "changeToCamera()">
+					<div id = "cameraIconContainer">
+						<img id = "cameraIcon" src = "img/photos-icon.png"/>
+					</div>
+				</a>
+
+				<a href = "#messageButton" OnClick = "changeToPosts()">
+					<div id = "postsIconContainer">
+						<img id = "postsIcon" src = "img/social-icon.png"/>
+					</div>
+				</a>
+			</div>
+
+			<hr id = "bioLine"/>
+			<hr id = "cameraLine"/>
+			<hr id = "postLine"/>
+
+			<div id = "contentContainer">
+
+				<div id = "bioContainer">
+
+					<div id = "bioHeader">
+						<h1>S A M A N T H A  <span class = "smallIndent">S U M M E R S</span></h1>
+					</div>
+
+					<div id = "bioBody">
+						<p>27 years old and looking for a reason to delete this app.<br><br>Go ahead and give me one. Do it. I dare you. I double dare you. No? Then let's be lonely together. What's the worst that could happen?<br><br>Seriously though, I don't know what I'm looking for but I sincerely hope it's you.</p>
+					</div>
+
+				</div>
+
+				<div id = "postContainer">
+
+					<div id = "postHeader">
+						<h1>R E C E N T <span class = "smallIndent">P O S T S</span>
+							<a href = "#messageButton" OnClick = "prevPost()"><span id = "postPrev">PREV</span></a>
+							<a href = "#messageButton" OnClick = "nextPost()"><span id = "postNext">NEXT</span></a>
+						</h1>
+					</div>
+
+					<div id = "postBody">
+						<img src = "img/twitter-icon.png"/>
+						<div id = "postBodyTextContainer">
+							<h1>Samantha Summers</h1>
+							<h2>@CaptainSummers</h2>
+							<p id="postBodyText">That quote has nothing to do with me. Just find it interesting. Move it along folks! [ 25 MIN AGO ]</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div id = "photoContainer">
+
+					<div id = "photoHeader">
+						<h1>R E C E N T <span class = "smallIndent">P H O T O S</span></h1>
+					</div>
+
+					<div id = "photoBody">
+
+						<a href = "#messageButton" OnClick = "changeImageOne()">
+							<div id = "firstPhotoContainer">
+								<img id = "picOneIcon" src ="img/pic-one.jpg"/>
+							</div>
+						</a>
+
+						<a href = "#messageButton" OnClick = "changeImageTwo()">
+							<div id = "secondPhotoContainer">
+								<img id = "picTwoIcon" src = "img/pic-two.jpg"/>
+							</div>
+						</a>
+
+						<a href = "#messageButton" OnClick = "changeImageThree()">
+							<div id = "thirdPhotoContainer">
+								<img id = "picThreeIcon" src = "img/pic-three.jpg"/>
+							</div>
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<a href = "firstconversation-samantha.html">
+				<div id = "messageButton">
+					<h1>MESSAGE</h1>
+				</div>
+			</a>
+
+		</div>
+
+	</body>
+
+
+</html>

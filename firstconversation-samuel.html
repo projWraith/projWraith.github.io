@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="css/firstconversation.css">
+
+		<script>
+
+			var continueSound = new Audio('audio/continue.mp3')
+
+			var receiveSound = new Audio('audio/receive.mp3')
+
+			var sendSound = new Audio('audio/send.mp3')
+
+			function playSendSound() {
+				sendSound.play();
+			}
+
+			function playReceiveSound() {
+				receiveSound.play();
+			}
+
+			function playContinueSound() {
+				continueSound.play();
+			}
+
+			function scrollToThree() {
+				var topPos = document.getElementById("roundThreeContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToThreeResponse() {
+				var topPos = document.getElementById("roundThreeResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFour() {
+				var topPos = document.getElementById("roundFourContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFourResponse() {
+				var topPos = document.getElementById("roundFourResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFive() {
+				var topPos = document.getElementById("roundFiveContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFiveResponse() {
+				var topPos = document.getElementById("roundFiveResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSix() {
+				var topPos = document.getElementById("roundSixContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSixResponse() {
+				var topPos = document.getElementById("roundSixResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+
+			function typingAppear() {
+				document.getElementById("typingContainer").style.display = "inline";
+			}
+
+			function typingDisappear() {
+				document.getElementById("typingContainer").style.display = "none";
+			}
+
+			function optionsAppear() {
+				document.getElementById("firstOption").style.visibility = "visible";
+				document.getElementById("secondOption").style.visibility = "visible";
+			}
+
+			function optionsDisappear() {
+				document.getElementById("firstOption").style.visibility = "hidden";
+				document.getElementById("secondOption").style.visibility = "hidden";				
+			}
+
+			function roundOneResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundOneResponseContainer").style.display = "block";
+			}
+
+			function roundTwoResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundTwoResponseContainer").style.display = "block";
+			}
+
+			function roundThreeResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundThreeResponseContainer").style.display = "block";
+				scrollToThreeResponse();
+			}
+
+			function roundFourResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundFourResponseContainer").style.display = "block";
+				scrollToFourResponse();
+			}
+
+			function roundFiveResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundFiveResponseContainer").style.display = "block";
+				scrollToFiveResponse();
+			}
+
+			function roundSixResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundSixResponseContainer").style.display = "block";
+				scrollToSixResponse();
+			}
+
+			function roundSevenResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundSevenResponseContainer").style.display = "block";
+			}
+
+			function roundEightResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundEightResponseContainer").style.display = "block";
+			}
+
+			function selectFirst() {
+
+
+				if (document.getElementById("firstOption").innerHTML == "Hey! How's it going?") {
+
+				playSendSound();
+				document.getElementById("roundOneText").innerHTML = "Hey! How's it going?"
+				document.getElementById("roundOneContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "And talking to me?";
+				document.getElementById("secondOption").innerHTML = "Oh, sweet! What's the occasion?";
+				document.getElementById("roundOneResponseText").innerHTML = "I'm alright! Just hanging out at a party right now.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundOneResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "And talking to me?" && document.getElementById("roundOneResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwoText").innerHTML = "And talking to me?";
+				document.getElementById("roundTwoContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'm just watching some shows at home.";
+				document.getElementById("secondOption").innerHTML = "Just downloaded the app. I'm back in the game.";
+			    document.getElementById("roundTwoResponseText").innerHTML = "My coworker just got promoted so she invited everyone to her place to celebrate. I thought it'd be cool to talk to someone more fun though. What's up on your end?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwoResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I'm just watching some shows at home." && document.getElementById("roundTwoResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThreeText").innerHTML = "I'm just watching some shows at home.";
+				document.getElementById("roundThreeContainer").style.display = "block";
+				scrollToThree();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I don't blame you.";
+				document.getElementById("secondOption").innerHTML = "I'd rather be partying right now.";
+			    document.getElementById("roundThreeResponseText").innerHTML = "Like, on TV? Ugh I wish I could be there too.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundThreeResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I don't blame you." && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "I don't blame you.";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Ever feel like doing more than observing?";
+				document.getElementById("secondOption").innerHTML = "So you're an outsider? Interesting.";
+			    document.getElementById("roundFourResponseText").innerHTML = "Did you ever watch Mutated Karate Tortoises? Literally my whole childhood right there! I always related to June. Pretty curious but kind of an outsider. I guess I'm more of an obsever than a participant. It's pretty intersting to watch those around you. I like to think about what their lives are like and maybe compare what they might be thinking to what they're saying, y'know? Back to the June comparison, I guess it's like figuring out what their scoop is. In other words, their truth.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("firstOption").innerHTML == "Hahaha just a joke. Guess it didn't land." && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "Hahaha just a joke. Guess it didn't land.";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How?";
+				document.getElementById("secondOption").innerHTML = "I don't follow...";
+			    document.getElementById("roundFourResponseText").innerHTML = "Humour is weird.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Ever feel like doing more than observing?" && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "Ever feel like doing more than observing?";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Everyone's the protagonist of their own story.";
+				document.getElementById("secondOption").innerHTML = "Don't sweat it. We're all good.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "Trust me, I've tried. Just feels like I dont belong. Like my coworkers are a team of superheroes and I'm just the civillian. And no matter how close I get to the team, I'll never be an official member. Always a secondary character. And here I go on another tangent again haha. Sorry about that!";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I appreciate the honesty." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "I appreciate the honesty.";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Definitely.";
+				document.getElementById("secondOption").innerHTML = "So you feel the same?";
+			    document.getElementById("roundFiveResponseText").innerHTML = "You know, that's really nice to hear. I'm glad I messaged you tonight. It's surprising how you can be surrounded by all these people and yet it's a someone on the other side of town who you open up to. Don't get me wrong here, I mean to say we're special. Mosaic was right. We connect. You feel it too right?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "How?" && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "How?";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'm wide awake.";
+				document.getElementById("secondOption").innerHTML = "No, it's scary how true that is.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "I don't know. I was thinking of it as a metephor of socializing. It can be hard to understand what's going on without having any context. You can be all giggles and everything but sometimes, in the back of your mind, you're just worried about becoming the punchline. Sorry, random exposition there! Hope you didn't fall asleep after all that?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Rough night?" && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "Rough night?";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Don't worry, I feel that way too.";
+				document.getElementById("secondOption").innerHTML = "I enjoy talking with you.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "I guess but it's been pretty good since I started talking with you. We seem to be on the same level, you know? I know Mosaic is supposed to give you your perfect match but... I didn't expect this. Please tell me I'm not crazy saying that. I mean to say, I feel like I genuinely connect to you.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Everyone's the protagonist of their own story." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Everyone's the protagonist of their own story.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Huh, never really thought of it that way. But hey, how do you feel about making this party a little wilder? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Weird is good. We don't have to belong." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Weird is good. We don't have to belong.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Huh, never really thought of it that way. But hey, how do you feel about making this party a little wilder? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Definitely." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Definitely.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Ha, glad you feel the same way! But hey, you want to do something fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I'm okay with crazy." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I'm okay with crazy.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Ha, glad to hear it! But hey, you want to do something fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "You doing alright?" && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "You doing alright?";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Actually, I'm feeling much better after talking to you. But hey, you wanna be my partner in crime? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("firstOption").innerHTML == "I'm wide awake." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I'm wide awake.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "If that's the case, why don't we have a little fun? You wanna be my partner in crime? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Don't worry, I feel that way too." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Don't worry, I feel that way too.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "If that's the case, why don't we have a little fun? You wanna be my partner in crime? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I like that too, Samuel." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I like that too, Samuel.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "If that's the case, why don't we have a little fun? You wanna be my partner in crime? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "How about no?" && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+					window.location.href = "strangerconversation-samuel.html";
+
+				}
+
+
+			}
+
+			function selectSecond() {
+
+
+				if (document.getElementById("secondOption").innerHTML == "Anyone there?") {
+
+				playSendSound();
+				document.getElementById("roundOneText").innerHTML = "Anyone there?";
+				document.getElementById("roundOneContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "And talking to me?";
+				document.getElementById("secondOption").innerHTML = "Oh, sweet! What's the occasion?";
+				document.getElementById("roundOneResponseText").innerHTML = "I'm here! Just hanging out at a party right now.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundOneResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Oh, sweet! What's the occasion?" && document.getElementById("roundOneResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwoText").innerHTML = "Oh, sweet! What's the occasion?";
+				document.getElementById("roundTwoContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'm just watching some shows at home.";
+				document.getElementById("secondOption").innerHTML = "Just downloaded the app. I'm back in the game.";
+			    document.getElementById("roundTwoResponseText").innerHTML = "My coworker just got promoted so she invited everyone to her place to celebrate. I thought it'd be cool to talk to someone more fun though. What's up on your end?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwoResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Just downloaded the app. I'm back in the game." && document.getElementById("roundTwoResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThreeText").innerHTML = "Just downloaded the app. I'm back in the game.";
+				document.getElementById("roundThreeContainer").style.display = "block";
+				scrollToThree();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Hahaha just a joke. Guess it didn't land.";
+				document.getElementById("secondOption").innerHTML = "You know what they say: life's a game!";
+			    document.getElementById("roundThreeResponseText").innerHTML = "Haha! Game? What? Are we getting philosophical or something? What is it? Nihilism? Existenialism? I don't really remember.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundThreeResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You know what they say: life's a game!" && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "You know what they say: life's a game!";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Rough night?";
+				document.getElementById("secondOption").innerHTML = "You alright?";
+			    document.getElementById("roundFourResponseText").innerHTML = "Games...I feel like it was so much easier to talk to people as a kid. You'd just ask to play with them and boom! You're in! It doesn't feel like that anymore. In groups, you can't help but feel like you're an outsider. I guess it's alright, I'm kind of used to it at this point.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I'd rather be partying right now." && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "I'd rather be partying right now.";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I appreciate the honesty.";
+				document.getElementById("secondOption").innerHTML = "I get how you feel.";
+			    document.getElementById("roundFourResponseText").innerHTML = "Don't get me wrong, this place is really cool and my coworkers are really nice but I don't really know any of them. It's okay though. I guess I'm not programmed to socialize in big crowds haha. I don't really hang around people in general. I've watched from the sidelines for as long as I can remember. Sorry, was that too much?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You alright?" && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "You alright?";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I like that too, Samuel.";
+				document.getElementById("secondOption").innerHTML = "I'm glad I can make you feel better.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "That's really sweet of you to ask. It's a lot better than expected ever we started talking. To be honest, I feel like I can open up to you so easily. That's rare, but I like that.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I get how you feel." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "I get how you feel.";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'm okay with crazy.";
+				document.getElementById("secondOption").innerHTML = "Maybe, but I'm not scared.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "That's surprising, I was worried I almost scared you off back there. I guess we really are a match. Crazy, isn't it?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "So you're an outsider? Interesting." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "So you're an outsider? Interesting.";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Weird is good. We don't have to belong.";
+				document.getElementById("secondOption").innerHTML = "It's all good.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "I'll admit, it gets lonely sometimes. It's not what the media makes it out to be. It has its downsides. I'm not some romanticized mysteruous figure who rocks leather jackets and smokes cigarettes. I mean, I can seriously rock a leather jacket but that's not the point. I don't even smoke. I can be a romantic though. Wait, I'm rambling. Sorry I'm acting weird. I just feel like I can be so open with you, you know? ";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I don't follow..." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "I don't follow...";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You doing alright?";
+				document.getElementById("secondOption").innerHTML = "I think you will.";
+			    document.getElementById("roundFiveResponseText").innerHTML = "I was thinking of it as a metaphor for socializing. You can easily get on board with simple jokes which is great. But then again, it doesn't compare to understanding the complex ones. The ones that sitck with you for a while. The thing about those kind of jokes is you really need to have the same kind of humour to get it, nevermind enjoy it. It's the same with people. That's alright, I'll get the punchline someday.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I'm glad I can make you feel better." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I'm glad I can make you feel better.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Hey, you wanna have a little fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I enjoy talking with you." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I enjoy talking with you.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "If that's the case, why don't we have a little fun. I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "No, it's scary how true that is." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "No, it's scary how true that is.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Why don't we scare other people for a change? I just found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I think you will." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I think you will.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Hey, you wanna have a little fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Maybe, but I'm not scared." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Maybe, but I'm not scared.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Why don't we scare other people for a change? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "So you feel the same?" && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "So you feel the same?";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Hey, you wanna have a little fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "It's all good." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "It's all good.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Hey, you wanna have a little fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Don't sweat it. We're all good." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "Don't sweat it. We're all good.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How about no?";
+				document.getElementById("secondOption").innerHTML = "Why not? Let's do it!";
+			    document.getElementById("roundSixResponseText").innerHTML = "Hey, you wanna have a little fun? Asking because I found the control panel for the house. I'll let you choose what to mess with first! We can change the wifi password, turn on the sprinklers, watch the security cameras, shut of the lights, lock all the doors for a few hours. It'll be funny! We can do anything. What do you say?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "Why not? Let's do it!" && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+					window.location.href = "strangerconversation-samuel.html";
+
+				}
+
+			}
+
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id = "mobileScreen">
+
+			<div id = "headerBar">
+				<img src = "img/mosaic-logo.png"/>
+			</div>
+
+			<div id = "conversationContainer">
+
+				<img id = "backgroundImage" src = "img/mosaic-logo.png"/>
+
+				<div id = "roundOneContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundOneTextContainer">
+						<p id = "roundOneText"></p>
+					</div>
+				</div>
+
+				<div id = "roundOneResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundOneResponseTextContainer">
+						<p id = "roundOneResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTwoContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundTwoTextContainer">
+						<p id = "roundTwoText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTwoResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundTwoResponseTextContainer">
+						<p id = "roundTwoResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundThreeContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundThreeTextContainer">
+						<p id = "roundThreeText"></p>
+					</div>
+				</div>
+
+				<div id = "roundThreeResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundThreeResponseTextContainer">
+						<p id = "roundThreeResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFourContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundFourTextContainer">
+						<p id = "roundFourText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFourResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundFourResponseTextContainer">
+						<p id = "roundFourResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFiveContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundFiveTextContainer">
+						<p id = "roundFiveText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFiveResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundFiveResponseTextContainer">
+						<p id = "roundFiveResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSixContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundSixTextContainer">
+						<p id = "roundSixText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSixResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundSixResponseTextContainer">
+						<p id = "roundSixResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSevenContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundSevenTextContainer">
+						<p id = "roundSevenText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSevenResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundSevenResponseTextContainer">
+						<p id = "roundSevenResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundEightContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundEightTextContainer">
+						<p id = "roundEightText"></p>
+					</div>
+				</div>
+
+				<div id = "roundEightResponseContainer">
+					<h1 class = "username">SAMUEL</h1>
+					<div id = "roundEightResponseTextContainer">
+						<p id = "roundEightResponseText"></p>
+					</div>
+				</div>
+
+			</div>
+
+			<div id = "optionsContainer">
+				
+				<a OnClick = "selectFirst()">
+					<div id = "firstOptionContainer">
+						<p id="firstOption">Hey! How's it going?</p>
+					</div>
+				</a>
+
+				<a OnClick = "selectSecond()">
+					<div id = "secondOptionContainer">
+						<p id="secondOption">Anyone there?</p>
+					</div>
+				</a>
+
+				<div id = "typingContainer">
+					<p>SAMUEL IS TYPING...</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+
+</html>

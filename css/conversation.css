@@ -1,0 +1,798 @@
+body {
+	background: #000;
+}
+
+#mobileScreen {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow: hidden;
+	border: solid 1px #808080;
+	display: none;
+}
+
+#mobileScreen2 {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow: hidden;
+	border: solid 1px #808080;	
+}
+
+
+#glitchAni {
+	width: 414px;
+	height: 736px;
+}
+
+#headerBar {
+	width: 414px;
+	height: 75px;
+	background: #04030f;
+}
+
+#headerBar img {
+	width: auto;
+	height: 35px;
+	position: relative;
+	left: 180px;
+	top: 20px;
+}
+
+#conversationContainer {
+	width: 414px;
+	height: 455px;
+	background: #201f25;
+	position: relative;
+	z-index: 1;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#backgroundImage {
+	width: 325px;
+	height: auto;
+	position: absolute;
+	left: 44.5px;
+	top: 115px;
+	z-index: -1;
+	opacity: 0.025;
+}
+
+
+.myName {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #fff;
+	letter-spacing: 7px;
+	font-size: 15px;
+	position: relative;
+	left: 335px;
+	top: 5px;
+}
+
+.username {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #fff;
+	letter-spacing: 7px;
+	font-size: 15px;
+	position: relative;
+	top: 6px;
+	left: 46px;
+}
+
+audio {
+	width: 140px;
+	position: relative;
+	left: 25px;
+	top: 14px;
+}
+
+
+/* ------------------------------ MESSAGES ------------------------------ */
+
+
+#roundOneContainer {
+	display: none;
+}
+
+#roundOneTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundOneText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTwoContainer {
+	display: none;
+}
+
+#roundTwoTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundTwoText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundThreeContainer {
+	display: none;
+}
+
+#roundThreeTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundThreeText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundFourContainer {
+	display: none;
+}
+
+#roundFourTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundFourText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundFiveContainer {
+	display: none;
+}
+
+#roundFiveTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundFiveText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundSixContainer {
+	display: none;
+}
+
+#roundSixTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundSixText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundSevenContainer {
+	display: none;
+}
+
+#roundSevenTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundSevenText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundEightContainer {
+	display: none;
+}
+
+#roundEightTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundEightText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundNineContainer {
+	display: none;
+}
+
+#roundNineTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundNineText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTenContainer {
+	display: none;
+}
+
+#roundTenTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundTenText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundElevenContainer {
+	display: none;
+}
+
+#roundElevenTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundElevenText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTwelveContainer {
+	display: none;
+}
+
+#roundTwelveTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundTwelveText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundThirteenContainer {
+	display: none;
+}
+
+#roundThirteenTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundThirteenText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundFourteenContainer {
+	display: none;
+}
+
+#roundFourteenTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #239370;
+	border-radius: 10px;
+	position: relative;
+	left: 180px;
+}
+
+#roundFourteenText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+
+/* ------------------------------ RESPONSES ------------------------------ */
+
+
+#roundOneResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundOneResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundOneResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTwoResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundTwoResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundTwoResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundThreeResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundThreeResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundThreeResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundFourResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundFourResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundFourResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundFiveResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundFiveResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundFiveResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundSixResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundSixResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundSixResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundSevenResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundSevenResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundSevenResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundEightResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundEightResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundEightResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundNineResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundNineResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundNineResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTenResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundTenResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundTenResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundElevenResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundElevenResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundElevenResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundTwelveResponseContainer {
+	display: none;
+	margin-top: 28px;
+}
+
+#roundTwelveResponseTextContainer {
+	max-width: 190px;
+	height: 100px;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#audioImgContainer {
+	width: 70px;
+	height: auto;
+	margin: auto;
+	position: relative;
+	top: 15px;
+}
+
+#audioImg {
+	max-width: 100%;
+	height: auto;
+}
+
+#roundTwelveResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+#roundThirteenResponseContainer {
+	display: none;
+	margin-top: 20px;
+}
+
+#roundThirteenResponseTextContainer {
+	max-width: 190px;
+	height: auto;
+	background: #808080;
+	border-radius: 10px;
+	position: relative;
+	left: 46px;
+}
+
+#roundThirteenResponseText {
+	color: #fff;
+	font-family: "Avenir Next";
+	padding: 10px;
+	font-size: 12px;
+}
+
+
+
+/* ------------------------------ OPTIONS ------------------------------ */
+
+
+#optionsContainer {
+	width: 414px;
+	height: 175px;
+	background: #04030f;
+}
+
+#firstOptionContainer {
+	width: 325px;
+	height: 50px;
+	margin: auto;
+	border: 1px solid #f24154;
+	position: relative;
+	top: 26px;
+}
+
+#firstOption {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	top: 5px;
+}
+
+#secondOptionContainer {
+	width: 325px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+	border: 1px solid #f24154;
+}
+
+#secondOption {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	top: 5px;
+}
+
+#typingContainer {
+	width: 325px;
+	display: none;
+	position: relative;
+	top: 12px;
+	right: 38px;
+
+}
+
+#typingContainer p {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #808080;
+	letter-spacing: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+
+/* -------------- THE END ---------------- */
+
+#mobileScreen3 {
+	width: 650px;
+	height: 736px;
+	margin: auto;
+	overflow: hidden;
+	display: none;
+}
+
+#projectTitle {
+	font-size: 50px;
+	font-family: "Avenir Next";
+	color: #fff;
+	letter-spacing: 15px;
+	font-weight: lighter;
+	text-align: center;
+	margin-left: 15px;
+	position: relative;
+	top: 23%;
+}
+
+#trailerDesc {
+	width: 598px;
+	margin: auto;
+	position: relative;
+	top: 50%;
+}
+
+#trailerDesc h2 {
+	color: #fff;
+	font-size: 15px;
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	margin: auto;
+	text-align: center;
+}
+
+#mobileScreen3 a {
+	display: block;
+	border: 2px solid #fff;
+	text-decoration: none;
+	position: relative;
+	top: 20%;
+	width: 598px;
+	margin:auto;
+}
+
+#mobileScreen3 a:hover {
+	border: 2px solid #32ca9a;
+}
+
+#trailerContinue p {
+	font-size: 15px;
+	font-family: "Avenir Next";
+	color: #fff;
+	letter-spacing: 15px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+
+
+
+
+

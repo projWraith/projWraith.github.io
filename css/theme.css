@@ -1,0 +1,488 @@
+body {
+	background: #000;
+}
+
+#mobileScreen {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow: hidden;
+	border: solid 1px #808080;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/*------- MATCH PAGE -------- */
+
+#headerBar {
+	width: 414px;
+	height: 75px;
+	background: #04030f;
+}
+
+#headerBar img {
+	width: auto;
+	height: 35px;
+	position: relative;
+	left: 180px;
+	top: 20px;
+}
+
+#mainPicture {
+	width: 414px;
+	height: 300px;
+}
+
+#mainPicture img {
+	position: relative;
+	width: auto;
+	height: 100%;
+}
+
+#iconBar {
+	width: 414px;
+	height: 90px;
+}
+
+#bioLine {
+	width: 80px;
+	position: relative;
+	right: 142px;
+	background-color: #fff
+}
+
+#cameraLine {
+	width: 90px;
+	position: relative;
+	right: 8px;
+	display: none;
+	background-color: #fff
+}
+
+#postLine {
+	width: 90px;
+	position: relative;
+	left: 132px;
+	display: none;
+	background-color: #fff
+}
+
+#bioIconContainer {
+	float: left;
+	height: 75px;
+	width: 100px;
+	position: relative;
+	top:15px;
+	margin-left: 35px;
+}
+
+#bioIconContainer img {
+	height: 80%;
+	width: auto;
+	opacity: 1;
+}
+
+#cameraIconContainer {
+	float: left;
+	height: 75px;
+	width: 100px;
+	opacity: 1;
+	position: relative;
+	top: 10px;
+	margin-left: 27px;
+}
+
+#cameraIconContainer img {
+	height: 100%;
+	width: auto;
+}
+
+
+#postsIconContainer {
+	float: left;
+	height: 65px;
+	width: 100px;
+	opacity: 1;
+	position: relative;
+	top: 18px;
+	margin-left: 45px;
+}
+
+#postsIconContainer img {
+	height: 100%;
+	width: auto;
+}
+
+
+#contentContainer {
+	width: 360px;
+	height: 165px;
+	background: #04030f;
+	margin: auto;
+}
+
+
+
+/* ----- BIOGRAPHY SECTION ----- */
+
+
+#bioContainer {
+	position: relative;
+	top: 6px;
+	display: inline;
+}
+
+#bioHeader h1 {
+	color: #32ca9a;
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	position: relative;
+	top: 15px;
+}
+
+.smallIndent {
+	padding-left: 10px;
+}
+
+#bioBody {
+	width: 360px;
+	height: 85px;
+	margin: auto;
+	position: relative;
+	top: 12px;
+	
+}
+
+#bioBody p {
+	font-family: "Avenir Next";
+	font-size: 10px;
+	position: relative;
+	color: #ffffff;
+	text-align: justify;
+	top: 3px;
+}
+
+
+
+/* ----- RECENT POSTS SECTION ----- */
+
+
+#postContainer {
+	position: relative;
+	top: 6px;
+	display: none;
+}
+
+#postHeader h1 {
+	color: #32ca9a;
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	position: relative;
+	top: 15px;
+}
+
+#postHeader a {
+	text-decoration: none;
+}
+
+.smallIndent {
+	padding-left: 10px;
+}
+
+#postNext {
+	font-size: 11px;
+	color: #fff;
+	margin-left: 10px;
+}
+
+#postPrev {
+	font-size: 11px;
+	color: #808080;
+	margin-left: 78px;
+}
+
+#postBody {
+	width: 360px;
+	height: 85px;
+	margin: auto;
+	position: relative;
+	top: 12px;
+	display: inline;
+}
+
+#postBody img {
+	position: relative;
+	top: 5px;
+	height: 75px;
+	width: auto;
+	float: left;
+}
+
+#postBodyTextContainer {
+	float: right;
+	width: 265px;
+	height: 75px;
+	background-color: #04030f;
+	position: relative;
+	top: 5px;
+}
+
+#postBodyTextContainer h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #32ca9a;
+	position: relative;
+	bottom: 13px;
+}
+
+#postBodyTextContainer h2 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #103d32;
+	position: relative;
+	bottom: 24px;
+}
+
+#postBodyTextContainer p {
+	font-family: "Avenir Next";
+	position: relative;
+	bottom: 25px;
+	color: #fff;
+	font-size: 10px;
+}
+
+#postBody2 {
+	display: none;
+	width: 360px;
+	height: 85px;
+	margin: auto;
+	position: relative;
+	top: 12px;
+}
+
+#postBody2 img {
+	position: relative;
+	top: 5px;
+	height: 75px;
+	width: auto;
+	float: left;
+}
+
+#postBodyTextContainer2 {
+	float: right;
+	width: 265px;
+	height: 75px;
+	background-color: #04030f;
+	position: relative;
+	top: 5px;
+}
+
+#postBodyTextContainer2 h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #32ca9a;
+	position: relative;
+	bottom: 13px;
+}
+
+#postBodyTextContainer2 h2 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #103d32;
+	position: relative;
+	bottom: 24px;
+}
+
+#postBodyTextContainer2 p {
+	font-family: "Avenir Next";
+	position: relative;
+	bottom: 25px;
+	color: #fff;
+	font-size: 10px;
+}
+
+#postBody3 {
+	display: none;
+	width: 360px;
+	height: 85px;
+	margin: auto;
+	position: relative;
+	top: 12px;
+}
+
+#postBody3 img {
+	position: relative;
+	top: 5px;
+	height: 75px;
+	width: auto;
+	float: left;
+}
+
+#postBodyTextContainer3 {
+	float: right;
+	width: 265px;
+	height: 75px;
+	background-color: #04030f;
+	position: relative;
+	top: 5px;
+}
+
+#postBodyTextContainer3 h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #32ca9a;
+	position: relative;
+	bottom: 13px;
+}
+
+#postBodyTextContainer3 h2 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 15px;
+	color: #103d32;
+	position: relative;
+	bottom: 24px;
+}
+
+#postBodyTextContainer3 p {
+	font-family: "Avenir Next";
+	position: relative;
+	bottom: 25px;
+	color: #fff;
+	font-size: 10px;
+}
+
+
+
+/* ----- RECENT PHOTOS SECTION ----- */
+
+
+#photoContainer {
+	position: relative;
+	top: 6px;
+	display: none;
+}
+
+#photoHeader h1 {
+	color: #32ca9a;
+	font-family: "Avenir";
+	font-weight: lighter;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	position: relative;
+	top: 15px;
+}
+
+#photoHeader a {
+	text-decoration: none;
+}
+
+.photoPrev {
+	font-size: 11px;
+	margin-left: 55px;
+	color: #808080;
+}
+
+.photoNext {
+	font-size: 11px;
+	margin-left: 10px;
+	color: #ffffff;
+}
+
+
+#photoBody {
+	width: 360px;
+	height: 85px;
+	margin: auto;
+	position: relative;
+	top: 17px;
+}
+
+#firstPhotoContainer {
+	width: 110px;
+	height: 75px;
+	float: left;
+	overflow: hidden;
+}
+
+#firstPhotoContainer img {
+	width: auto;
+	height: 100%;
+	opacity: 1;
+}
+
+#secondPhotoContainer {
+	width: 110px;
+	height: 75px;
+	float: left;
+	overflow: hidden;
+	margin-left: 15px;
+}
+
+#secondPhotoContainer img {
+	width: auto;
+	height: 100%;
+	opacity: 0.5;
+}
+
+#thirdPhotoContainer {
+	width: 110px;
+	height: 75px;
+	float: left;
+	overflow: hidden;
+	margin-left: 15px;
+}
+
+#thirdPhotoContainer img {
+	width: auto;
+	height: 100%;
+	opacity: 0.5;
+}
+
+
+
+/* ----- MESSAGE BUTTON ----- */
+
+
+#messageButton {
+	width: 358px;
+	height: 60px;
+	border: solid 1px #f24154;
+	margin: auto;
+}
+
+#messageButton h1 {
+	font-family: "Avenir";
+	font-size: 13px;
+	font-weight: lighter;
+	color: #ffffff;
+	letter-spacing: 20px;
+	position: relative;
+	left: 86px;
+	top: 13px;
+}
+
+
+
+
+
+

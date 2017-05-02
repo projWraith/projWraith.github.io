@@ -1,0 +1,261 @@
+body {
+	background: #000;
+}
+
+#mobileScreen {
+	width: 414px;
+	height: 736px;
+	background: #04030f;
+	margin: auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: solid 1px #808080;
+}
+
+#headerBar {
+	width: 414px;
+	height: 75px;
+	background: #04030f;
+}
+
+#headerBar img {
+	width: auto;
+	height: 35px;
+	position: relative;
+	left: 180px;
+	top: 20px;
+}
+
+#firstStage {
+	display: block;
+}
+
+#videoContainer {
+	width: 414px;
+	height: 300px;
+}
+
+iframe {
+	position: relative;
+	right: 45px;
+}
+
+#videoContainer img {
+	position: relative;
+	width: auto;
+	height: 100%;
+}
+
+#firstSection {
+	width: 325px;
+	margin: auto;
+	position: relative;
+	top: 10px;
+}
+
+.inputWidth {
+	width: 323px;
+	height: 27px;
+	margin-left: auto;
+	margin-top: 15px;
+	background-color: #04030f;
+	border-bottom: 1px solid #32ca9a;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	color: #fff;
+	outline: none;
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+#continueButton {
+	width: 325px;
+	height: 50px;
+	border: 1px solid #f24154;
+	margin: auto;
+	position: relative;
+	top: 46px;
+
+}
+
+#continueButton h2 {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	font-weight: lighter;
+	letter-spacing: 14px;
+	position: relative;
+	top: 8px;
+	left: 78px;
+}
+
+#secondSection {
+	width: 325px;
+	margin: auto;
+	position: relative;
+	top: 10px;
+	display: none;
+}
+
+.inputWidth2 {
+	width: 323px;
+	height: 27px;
+	margin-left: auto;
+	margin-top: 15px;
+	background-color: #04030f;
+	border-bottom: 1px solid #32ca9a;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	color: #fff;
+	outline: none;
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+#sexContainer {
+	width: 325px;
+	height: auto;
+	margin: auto;
+	position: relative;
+	top: 20px;
+	display: none;
+}
+
+#sexContainer h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 15px;
+}
+
+.sexOptionContainer {
+	width:102px;
+	border: 1px solid #32ca9a;
+	float: left;
+	margin-top: 5px;
+}
+
+#femaleOption {
+	margin-left: 6.5px;
+}
+
+#nonBinaryOption {
+	margin-left: 6.5px;
+}
+
+.sexOptionContainer p {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #fff;
+	font-size: 9px;
+	text-align: center;
+}
+
+#interestContainer {
+	width: 325px;
+	height: auto;
+	margin: auto;
+	position: relative;
+	top: 50px;
+	clear: both;
+	display: none;
+}
+
+#interestContainer h1 {
+	font-family: "Avenir";
+	font-weight: lighter;
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 15px;
+}
+
+.interestOptionContainer {
+	width:102px;
+	border: 1px solid #32ca9a;
+	float: left;
+	margin-top: 5px;
+}
+
+#womenOption {
+	margin-left: 6.5px;
+}
+
+#bothOption {
+	margin-left: 6.5px;
+}
+
+.interestOptionContainer p {
+	font-family: "Avenir Next";
+	font-weight: lighter;
+	color: #fff;
+	font-size: 9px;
+	text-align: center;
+}
+
+#continueButton2 {
+	width: 325px;
+	height: 50px;
+	border: 1px solid #f24154;
+	margin: auto;
+	position: relative;
+	top: 46px;
+	display: none;
+}
+
+#continueButton2 h2 {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	font-weight: lighter;
+	letter-spacing: 14px;
+	position: relative;
+	top: 8px;
+	left: 78px;
+}
+
+#continueButton3 {
+	width: 325px;
+	height: 50px;
+	border: 1px solid #f24154;
+	margin: auto;
+	position: relative;
+	top: 140px;
+	display: none;
+}
+
+#continueButton3 h2 {
+	font-family: "Avenir Next";
+	color: #fff;
+	font-size: 12px;
+	font-weight: lighter;
+	letter-spacing: 14px;
+	position: relative;
+	bottom: 18px;
+	left: 78px;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

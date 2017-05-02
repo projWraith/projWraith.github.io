@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<link rel = "stylesheet" type = "text/css" href = "css/finding-match.css">
+
+		<script type = "text/javascript">
+
+			var num = 0;
+			var interval = Math.floor((Math.random() * 2000) + 1);
+
+			function removeAd() {
+
+				document.getElementById("nonAdContainer").style.display = "block";
+				document.getElementById("adContainer").style.display = "none";	
+
+			}
+
+			function firstAdAppear() {
+
+				document.getElementById("nonAdContainer").style.display = "none";
+				document.getElementById("adContainer").style.display = "block";	
+
+			}
+
+			function secondAdAppear() {
+
+				document.getElementById("advertisementImage").src = "img/advertisement2.jpg";
+				document.getElementById("nonAdContainer").style.display = "none";
+				document.getElementById("adContainer").style.display = "block";	
+
+			}
+
+			setTimeout(firstAdAppear, interval * 15)
+			setTimeout(secondAdAppear, interval * 60)
+			
+			window.setInterval (
+				function() {
+
+					if (num < 100 ) {
+
+						num = num + 1;
+						document.getElementById('number').innerHTML = num;
+
+						if (num > 10 && num <= 20) {
+							document.getElementById('1').style.color = "#808080";
+							document.getElementById('textContainer2').style.opacity = "1";
+						}
+
+						else if (num > 20 && num <= 30) {
+							document.getElementById('2').style.color = "#808080";
+							document.getElementById('textContainer3').style.opacity = "1";
+						}
+
+						else if (num > 30 && num <= 50) {
+							document.getElementById('3').style.color = "#808080";
+							document.getElementById('textContainer4').style.opacity = "1";
+						}
+
+						else if (num > 50 && num <= 70) {
+							document.getElementById('4').style.color = "#808080";
+							document.getElementById('textContainer5').style.opacity = "1";
+						}
+
+						else if (num > 70 && num <= 99) {
+							document.getElementById('5').style.color = "#808080";
+							document.getElementById('textContainer6').style.opacity = "1";
+						}
+
+
+					}
+
+					else if (num = 100){
+
+						document.getElementById('number').innerHTML = "100";
+						document.getElementById('continueButton').style.opacity = "1";
+						document.getElementById('inner').style.animationPlayState = "paused";
+						document.getElementById('6').style.color = "#808080";
+						document.getElementById('textContainer7').style.opacity = "1";
+						document.getElementById("nonAdContainer").style.display = "block";
+						document.getElementById("adContainer").style.display = "none";
+
+					}
+				}
+
+			, interval);
+
+
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div id = "mobileScreen">
+
+			<div id="adContainer">
+				<img id="advertisementImage" src = "img/advertisement1.jpg"/>
+				<a onClick="removeAd();"><h1 id="adClose">[ CLOSE AD ]</h1></a>
+			</div>
+
+			<div id="nonAdContainer">
+
+				<div id="logoContainer">
+					<img src = "img/mosaic-logo.png"/>
+				</div>
+
+				<div id = "inner">
+					<div id="numberContainer">
+						<p id = "number">0</p>
+					</div>
+				</div>
+
+				<div id = "bigContainer">
+
+					<div id = "textContainer1">
+						<h1 id ="1">ANALYZING DEVICE HISTORY...</h1>
+					</div>
+
+					<div id = "textContainer2">
+						<h1 id ="2">IDENTIFYING SOCIAL ACCOUNTS...</h1>
+					</div>
+
+					<div id = "textContainer3">
+						<h1 id ="3">EXAMINING DIGITAL FOOTPRINT...</h1>
+					</div>
+
+					<div id = "textContainer4">
+						<h1 id ="4">VERIFYING PERSONAL INFORMATION...</h1>
+					</div>
+
+					<div id = "textContainer5">
+						<h1 id ="5">CONSTRUCTING ONLINE PERSONA...</h1>
+					</div>
+
+					<div id = "textContainer6">
+						<h1 id ="6">FINDING PERFECT MATCH...</h1>
+					</div>
+
+					<div id = "textContainer7">
+						<h1 id ="7">MATCH FOUND</h1>
+					</div>
+
+				</div>
+
+				<a href = "index-woman.html">
+					<div id = "continueButton"/>
+						<h2>CONTINUE</h2>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+
+
+	</body>
+
+
+</html>

@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<link rel = "stylesheet" type = "text/css" href = "css/conversation.css">
+
+		<script type = "text/javascript">
+
+			var continueSound = new Audio('audio/continue.mp3')
+
+			var receiveSound = new Audio('audio/receive.mp3')
+
+			var sendSound = new Audio('audio/send.mp3')
+
+			function playInterrogation() {
+
+				document.getElementById('audioImg').style.opacity = "0.3";
+				var interrogation = new Audio('audio/interrogation.mp3')
+
+				interrogation.play();
+
+				interrogation.onended = function() {
+					document.getElementById('audioImg').style.opacity = "1";	
+				}
+			}
+
+			function playSendSound() {
+				sendSound.play();
+			}
+
+			function playReceiveSound() {
+				receiveSound.play();
+			}
+
+			function playContinueSound() {
+				continueSound.play();
+			}
+
+			function myFunction() {
+				document.getElementById("mobileScreen2").style.display = "none";
+				document.getElementById("mobileScreen").style.display = "block";
+			}
+
+			setTimeout(myFunction, 7000);
+
+			function scrollToThree() {
+				var topPos = document.getElementById("roundThreeContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToThreeResponse() {
+				var topPos = document.getElementById("roundThreeResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFour() {
+				var topPos = document.getElementById("roundFourContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFourResponse() {
+				var topPos = document.getElementById("roundFourResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFive() {
+				var topPos = document.getElementById("roundFiveContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToFiveResponse() {
+				var topPos = document.getElementById("roundFiveResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSix() {
+				var topPos = document.getElementById("roundSixContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSixResponse() {
+				var topPos = document.getElementById("roundSixResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSeven() {
+				var topPos = document.getElementById("roundSevenContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToSevenResponse() {
+				var topPos = document.getElementById("roundSevenResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToEight() {
+				var topPos = document.getElementById("roundEightContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToEightResponse() {
+				var topPos = document.getElementById("roundEightResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToNine() {
+				var topPos = document.getElementById("roundNineContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToNineResponse() {
+				var topPos = document.getElementById("roundNineResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToTen() {
+				var topPos = document.getElementById("roundTenContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToTenResponse() {
+				var topPos = document.getElementById("roundTenResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToEleven() {
+				var topPos = document.getElementById("roundElevenContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToElevenResponse() {
+				var topPos = document.getElementById("roundElevenResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToTwelve() {
+				var topPos = document.getElementById("roundTwelveContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToTwelveResponse() {
+				var topPos = document.getElementById("roundTwelveResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToThirteen() {
+				var topPos = document.getElementById("roundThirteenContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function scrollToThirteenResponse() {
+				var topPos = document.getElementById("roundThirteenResponseContainer").offsetTop;
+				document.getElementById("conversationContainer").scrollTop = topPos-10;
+			}
+
+			function endFunction() {
+				document.getElementById("mobileScreen").style.display = "none";
+				document.getElementById("mobileScreen3").style.display = "block";
+			}
+
+			function typingAppear() {
+				document.getElementById("typingContainer").style.display = "inline";
+			}
+
+			function typingDisappear() {
+				document.getElementById("typingContainer").style.display = "none";
+			}
+
+			function optionsAppear() {
+				document.getElementById("firstOption").style.visibility = "visible";
+				document.getElementById("secondOption").style.visibility = "visible";
+			}
+
+			function optionsDisappear() {
+				document.getElementById("firstOption").style.visibility = "hidden";
+				document.getElementById("secondOption").style.visibility = "hidden";				
+			}
+
+			function roundOneResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundOneResponseContainer").style.display = "block";
+			}
+
+			function roundTwoResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundTwoResponseContainer").style.display = "block";
+			}
+
+			function roundThreeResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundThreeResponseContainer").style.display = "block";
+				scrollToThreeResponse();
+			}
+
+			function roundFourResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundFourResponseContainer").style.display = "block";
+				scrollToFourResponse();
+			}
+
+			function roundFiveResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundFiveResponseContainer").style.display = "block";
+				scrollToFiveResponse();
+			}
+
+			function roundSixResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundSixResponseContainer").style.display = "block";
+				scrollToSixResponse();
+			}
+
+			function roundSevenResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundSevenResponseContainer").style.display = "block";
+				scrollToSevenResponse();
+			}
+
+			function roundEightResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundEightResponseContainer").style.display = "block";
+				scrollToEightResponse();
+			}
+
+			function roundNineResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundNineResponseContainer").style.display = "block";
+				scrollToNineResponse();
+			}
+
+			function roundTenResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundTenResponseContainer").style.display = "block";
+				scrollToTenResponse();
+			}
+
+			function roundElevenResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundElevenResponseContainer").style.display = "block";
+				scrollToElevenResponse();
+			}
+
+			function roundTwelveResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundTwelveResponseContainer").style.display = "block";
+				scrollToTwelveResponse();
+			}
+
+			function roundThirteenResponseAppear() {
+				playReceiveSound();
+				document.getElementById("roundThirteenResponseContainer").style.display = "block";
+				scrollToThirteenResponse();
+			}
+
+			function selectFirst() {
+
+				if (document.getElementById("firstOption").innerHTML == "Samantha?") {
+
+				playSendSound();
+				document.getElementById("roundOneText").innerHTML = "Samantha?"
+				document.getElementById("roundOneContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Who are you?";
+				document.getElementById("secondOption").innerHTML = "What's going on here?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundOneResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Who are you?" && document.getElementById("roundOneResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwoText").innerHTML = "Who are you?";
+				document.getElementById("roundTwoContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What is this?";
+				document.getElementById("secondOption").innerHTML = "Why won't you answer me?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwoResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "What is this?" && document.getElementById("roundTwoResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThreeText").innerHTML = "What is this?";
+				document.getElementById("roundThreeContainer").style.display = "block";
+				scrollToThree();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What happened to Samantha?";
+				document.getElementById("secondOption").innerHTML = "Why does it matter to you?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundThreeResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What happened to Samantha?" && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "What happened to Samantha?";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I don't have to tell you anything.";
+				document.getElementById("secondOption").innerHTML = "Just give me a moment.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "I don't have to tell you anything." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "I don't have to tell you anything.";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What do you want from me?";
+				document.getElementById("secondOption").innerHTML = "What do you have against Mosaic?";
+				document.getElementById("roundFiveResponseText").innerHTML = "You're right. You don't have to tell me anything. Because if I wanted to, I could pry myself into every intimate corner of your life. I mean, you let Mosaic do it. And for what? For love?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What do you want from me?" && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "What do you want from me?";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Funny way to ask for it.";
+				document.getElementById("secondOption").innerHTML = "Sorry. I'm not interested.";
+				document.getElementById("roundSixResponseText").innerHTML = "I need your help.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "I'd save the driver." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I'd save the driver.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Great. Now leave me alone.";
+				document.getElementById("secondOption").innerHTML = "Who would you save?";
+				document.getElementById("roundSixResponseText").innerHTML = "You're full of surprises. I like you.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Funny way to ask for it." && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSevenText").innerHTML = "Funny way to ask for it.";
+				document.getElementById("roundSevenContainer").style.display = "block";
+				scrollToSeven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Mosaic is a dating app, not a bomb.";
+				document.getElementById("secondOption").innerHTML = "Got it. Trust no one. Except you, right?";
+				document.getElementById("roundSevenResponseText").innerHTML = "All I did was point out the hypocrisy in trusting products over people when both are equally capable of destroying everything and everyone you care about.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Great. Now leave me alone." && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSevenText").innerHTML = "Great. Now leave me alone.";
+				document.getElementById("roundSevenContainer").style.display = "block";
+				scrollToSeven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Us? Partners? No chance.";
+				document.getElementById("secondOption").innerHTML = "You don't know me.";
+				document.getElementById("roundSevenResponseText").innerHTML = "Harshness doesn't suit you. If we're going to be partners, I need you to be you. Nothing more. Nothing less.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Mosaic is a dating app, not a bomb." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Mosaic is a dating app, not a bomb.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "And you think the two are related?";
+				document.getElementById("secondOption").innerHTML = "I feel sorry for you.";
+				document.getElementById("roundEightResponseText").innerHTML = "And yet our world is about to explode.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Yeah, well, it won't be the end of the world." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Yeah, well, it won't be the end of the world.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "And you think the two are related?";
+				document.getElementById("secondOption").innerHTML = "I feel sorry for you.";
+				document.getElementById("roundEightResponseText").innerHTML = "And yet our world is about to explode.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Seems like a copout to me." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Seems like a copout to me.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What is your dilemma then?";
+				document.getElementById("secondOption").innerHTML = "This is a waste of time.";
+				document.getElementById("roundEightResponseText").innerHTML = "Deciding who to save and why is your dilemma, not mine.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "Us? Partners? No chance." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Us? Partners? No chance.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "This is a dating app.";
+				document.getElementById("secondOption").innerHTML = "No....";
+				document.getElementById("roundEightResponseText").innerHTML = "I'm sorry, did you think I meant romantic partners?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("firstOption").innerHTML == "And you think the two are related?" && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "And you think the two are related?";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Care to elaborate?";
+				document.getElementById("secondOption").innerHTML = "You're all talk.";
+				document.getElementById("roundNineResponseText").innerHTML = "I know it.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "I can live with that." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "I can live with that.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Is that a threat?";
+				document.getElementById("secondOption").innerHTML = "You don't scare me.";
+				document.getElementById("roundNineResponseText").innerHTML = "Then you'll die like the rest.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What is your dilemma then?" && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "What is your dilemma then?";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Is that a threat?";
+				document.getElementById("secondOption").innerHTML = "You don't scare me.";
+				document.getElementById("roundNineResponseText").innerHTML = "Would you like to know the odds of you surviving the next month?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "This is a dating app." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "This is a dating app.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What do you mean?";
+				document.getElementById("secondOption").innerHTML = "You're crazy?";
+				document.getElementById("roundNineResponseText").innerHTML = "That's where you're wrong.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "You're not my type." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "You're not my type.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Something tells me you do.";
+				document.getElementById("secondOption").innerHTML = "I'm not sure.";
+				document.getElementById("roundNineResponseText").innerHTML = "Cute. Maybe in another life. Do you believe in reincarnation?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Care to elaborate?" && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "Care to elaborate?";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'm not scared.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "There's no going back.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Is that a threat?" && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "Is that a threat?";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Who wants to kill me?";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "I am a threat. But not to you. I'm a threat to those who'd have you killed and all records of you erased without a second thought.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What do you mean?" && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "What do you mean?";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You're starting to freak me out.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "There's something you need to know about Mosaic. Something that is going to change your life forever, and if you truly care about your loved ones, you're not going to run or scream or laugh or cry. You're going to listen.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Something tells me you do." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "Something tells me you do.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What's your secret?";
+				document.getElementById("secondOption").innerHTML = "And why should I care?";
+				document.getElementById("roundTenResponseText").innerHTML = "Not quite. I just have a new lease on life.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "I'm not scared." && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "I'm not scared.";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Whatever. Leave me alone." && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "Whatever. Leave me alone.";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Then?" && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "Then?";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "Who wants to kill me?" && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "Who wants to kill me?";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+
+				if (document.getElementById("firstOption").innerHTML == "You're starting to freak me out." && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "You're starting to freak me out.";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What's your secret?" && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "What's your secret?";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "How am I supposed to believe any of this?" && document.getElementById("roundElevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwelveText").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("roundTwelveContainer").style.display = "block";
+				scrollToTwelve();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What am I supposed to do here?";
+				document.getElementById("secondOption").innerHTML = "I don't want any part of this.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwelveResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("firstOption").innerHTML == "What am I supposed to do here?" && document.getElementById("roundTwelveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThirteenText").innerHTML = "What am I supposed to do here?";
+				document.getElementById("roundThirteenContainer").style.display = "block";
+				scrollToThirteen();
+				optionsDisappear();
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(roundThirteenResponseAppear, 2000);
+				setTimeout(endFunction, 10000)
+
+				}	
+
+
+			}
+
+			function selectSecond() {
+
+				if (document.getElementById("secondOption").innerHTML == "Hello?") {
+
+				playSendSound();
+				document.getElementById("roundOneText").innerHTML = "Hello?";
+				document.getElementById("roundOneContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Who are you?";
+				document.getElementById("secondOption").innerHTML = "What's going on here?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundOneResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "What's going on here?" && document.getElementById("roundOneResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwoText").innerHTML = "What's going on here?";
+				document.getElementById("roundTwoContainer").style.display = "block";
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What is this?";
+				document.getElementById("secondOption").innerHTML = "Why won't you answer me?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwoResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Why won't you answer me?" && document.getElementById("roundTwoResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThreeText").innerHTML = "Why won't you answer me?";
+				document.getElementById("roundThreeContainer").style.display = "block";
+				scrollToThree();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What happened to Samantha?";
+				document.getElementById("secondOption").innerHTML = "Why does it matter to you?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundThreeResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Why does it matter to you?" && document.getElementById("roundThreeResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFourText").innerHTML = "Why does it matter to you?";
+				document.getElementById("roundFourContainer").style.display = "block";
+				scrollToFour();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I don't have to tell you anything.";
+				document.getElementById("secondOption").innerHTML = "Just give me a moment.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFourResponseAppear, 2000);
+
+				}	
+
+				if (document.getElementById("secondOption").innerHTML == "Just give me a moment." && document.getElementById("roundFourResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundFiveText").innerHTML = "Just give me a moment.";
+				document.getElementById("roundFiveContainer").style.display = "block";
+				scrollToFive();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I'd save the driver.";
+				document.getElementById("secondOption").innerHTML = "I'd save the pedestrian.";
+				document.getElementById("roundFiveResponseText").innerHTML = "Time is running out.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundFiveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I'd save the pedestrian." && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "I'd save the pedestrian.";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Great. Now leave me alone.";
+				document.getElementById("secondOption").innerHTML = "Who would you save?";
+				document.getElementById("roundSixResponseText").innerHTML = "You're full of surprises. I like you.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "What do you have against Mosaic?" && document.getElementById("roundFiveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSixText").innerHTML = "What do you have against Mosaic?";
+				document.getElementById("roundSixContainer").style.display = "block";
+				scrollToSix();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Funny way to ask for it.";
+				document.getElementById("secondOption").innerHTML = "Sorry. I'm not interested.";
+				document.getElementById("roundSixResponseText").innerHTML = "I need your help.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSixResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "Who would you save?" && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSevenText").innerHTML = "Who would you save?";
+				document.getElementById("roundSevenContainer").style.display = "block";
+				scrollToSeven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Seems like a copout to me.";
+				document.getElementById("secondOption").innerHTML = "Why is that?";
+				document.getElementById("roundSevenResponseText").innerHTML = "At this point in time that's irrelevant.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSevenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Sorry. I'm not interested." && document.getElementById("roundSixResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundSevenText").innerHTML = "Sorry. I'm not interested.";
+				document.getElementById("roundSevenContainer").style.display = "block";
+				scrollToSeven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Yeah, well, it won't be the end of the world.";
+				document.getElementById("secondOption").innerHTML = "That's your problem, not mine.";
+				document.getElementById("roundSevenResponseText").innerHTML = "That's not how this works.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundSevenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Why is that?" && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Why is that?";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What is your dilemma then?";
+				document.getElementById("secondOption").innerHTML = "This is a waste of time.";
+				document.getElementById("roundEightResponseText").innerHTML = "Deciding who to save and why is your dilemma, not mine.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Got it. Trust no one. Except you, right?" && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "Got it. Trust no one. Except you, right?";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I can live with that.";
+				document.getElementById("secondOption").innerHTML = "I'll take my chances.";
+				document.getElementById("roundEightResponseText").innerHTML = "You're going to regret this.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "That's your problem, not mine." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "That's your problem, not mine.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "I can live with that.";
+				document.getElementById("secondOption").innerHTML = "I'll take my chances.";
+				document.getElementById("roundEightResponseText").innerHTML = "You're going to regret this.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "You don't know me." && document.getElementById("roundSevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundEightText").innerHTML = "You don't know me.";
+				document.getElementById("roundEightContainer").style.display = "block";
+				scrollToEight();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You're not my type.";
+				document.getElementById("secondOption").innerHTML = "That's not your decision to make.";
+				document.getElementById("roundEightResponseText").innerHTML = "Not yet.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundEightResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "This is a waste of time." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "This is a waste of time.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What do you mean?";
+				document.getElementById("secondOption").innerHTML = "You're crazy.";
+				document.getElementById("roundNineResponseText").innerHTML = "That's where you're wrong.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I feel sorry for you." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "I feel sorry for you.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Care to elaborate?";
+				document.getElementById("secondOption").innerHTML = "You're all talk.";
+				document.getElementById("roundNineResponseText").innerHTML = "No, I feel sorry for you. You have no idea what's out there. But I'm going to fix that.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I'll take my chances." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "I'll take my chances.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Is that a threat?";
+				document.getElementById("secondOption").innerHTML = "You don't scare me.";
+				document.getElementById("roundNineResponseText").innerHTML = "Would you like to know the odds of you surviving the next month?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "No..." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "No...";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Something tells me you do.";
+				document.getElementById("secondOption").innerHTML = "I'm not sure.";
+				document.getElementById("roundNineResponseText").innerHTML = "Cute. Maybe in another life. Do you believe in reincarnation?";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}
+
+
+				if (document.getElementById("secondOption").innerHTML == "That's not your decision to make." && document.getElementById("roundEightResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundNineText").innerHTML = "That's not your decision to make.";
+				document.getElementById("roundNineContainer").style.display = "block";
+				scrollToNine();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Is that a threat?";
+				document.getElementById("secondOption").innerHTML = "That isn't funny.";
+				document.getElementById("roundNineResponseText").innerHTML = "It is if you want to live.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundNineResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You're crazy." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "You're crazy.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You're starting to freak me out.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "There's something you need to know about Mosaic. Something that is going to change your life forever, and if you truly care about your loved ones, you're not going to run or scream or laugh or cry. You're going to listen.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I'm not sure." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "I'm not sure.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You're starting to freak me out.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "There's something you need to know about Mosaic. Something that is going to change your life forever, and if you truly care about your loved ones, you're not going to run or scream or laugh or cry. You're going to listen.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "That isn't funny." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "That isn't funny.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "You're starting to freak me out.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "There's something you need to know about Mosaic. Something that is going to change your life forever, and if you truly care about your loved ones, you're not going to run or scream or laugh or cry. You're going to listen.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You're all talk." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "You're all talk.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Whatever. Leave me alone.";
+				document.getElementById("secondOption").innerHTML = "Is this a joke?";
+				document.getElementById("roundTenResponseText").innerHTML = "If only.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You don't scare me." && document.getElementById("roundNineResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTenText").innerHTML = "You don't scare me.";
+				document.getElementById("roundTenContainer").style.display = "block";
+				scrollToTen();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "Then?";
+				document.getElementById("secondOption").innerHTML = "I told you. I'm not scared.";
+				document.getElementById("roundTenResponseText").innerHTML = "I'm not the one you need to be scared of.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "Is this a joke?" && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "Is this a joke?";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I told you. I'm not scared." && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "I told you. I'm not scared.";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "And why should I care?" && document.getElementById("roundTenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundElevenText").innerHTML = "And why should I care?";
+				document.getElementById("roundElevenContainer").style.display = "block";
+				scrollToEleven();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "How am I supposed to believe any of this?";
+				document.getElementById("secondOption").innerHTML = "You're psychotic.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundElevenResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "You're psychotic." && document.getElementById("roundElevenResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundTwelveText").innerHTML = "You're psychotic.";
+				document.getElementById("roundTwelveContainer").style.display = "block";
+				scrollToTwelve();
+				optionsDisappear();
+				document.getElementById("firstOption").innerHTML = "What am I supposed to do here?";
+				document.getElementById("secondOption").innerHTML = "I don't want any part of this.";
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(optionsAppear, 2000);
+				setTimeout(roundTwelveResponseAppear, 2000);
+
+				}
+
+				if (document.getElementById("secondOption").innerHTML == "I don't want any part of this." && document.getElementById("roundTwelveResponseContainer").style.display == "block") {
+
+				playSendSound();
+				document.getElementById("roundThirteenText").innerHTML = "I don't want any part of this.";
+				document.getElementById("roundThirteenContainer").style.display = "block";
+				scrollToThirteen();
+				optionsDisappear();
+				setTimeout(typingAppear, 1000);
+				setTimeout(typingDisappear, 2000);
+				setTimeout(roundThirteenResponseAppear, 2000);
+				setTimeout(endFunction, 10000)
+
+				}	
+
+			}
+
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div id="mobileScreen3">
+
+			<h1 id="projectTitle">PROJECT WRAITH</h1>
+
+			<div id="trailerDesc">
+				<h2>In Development.</h2>
+			</div>
+
+			<a id ="trailerContinue" href ="https://www.youtube.com/watch?v=Wxpbnwd54kI&feature=youtu.be">
+				<p>VIEW TRAILER</p>
+			</a>
+
+		</div>
+
+		<div id = "mobileScreen2">
+			<img id = "glitchAni" src = "http://i.imgur.com/DnyDBBo.gif"/>
+		</div>
+
+		<div id = "mobileScreen">
+
+			<div id = "headerBar">
+				<img src = "img/mosaic-logo.png"/>
+			</div>
+
+			<div id = "conversationContainer">
+
+				<img id = "backgroundImage" src = "img/mosaic-logo.png"/>
+
+				<div id = "roundOneContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundOneTextContainer">
+						<p id = "roundOneText"></p>
+					</div>
+				</div>
+
+				<div id = "roundOneResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundOneResponseTextContainer">
+						<p id = "roundOneResponseText">Did you know there are almost one billion automated vehicles in use today? And each one of them has a moral barometer, programmed by regular people like you. People with full lives and loved ones and hopes and fears.</p>
+					</div>
+				</div>
+
+				<div id = "roundTwoContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundTwoTextContainer">
+						<p id = "roundTwoText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTwoResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundTwoResponseTextContainer">
+						<p id = "roundTwoResponseText">A self-driving car is hurtling down a road when all of a sudden, a pedestrian inadvertently steps into its path. Now imagine there are only two actions this car can take. It can continue on its path, killing the pedestrian and saving the driver, or it can swerve into the roadside barrier, killing the driver and saving the pedestrian.</p>
+					</div>
+				</div>
+
+				<div id = "roundThreeContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundThreeTextContainer">
+						<p id = "roundThreeText"></p>
+					</div>
+				</div>
+
+				<div id = "roundThreeResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundThreeResponseTextContainer">
+						<p id = "roundThreeResponseText">If it was your responsibility, which action would you program the car to take?</p>
+					</div>
+				</div>
+
+				<div id = "roundFourContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundFourTextContainer">
+						<p id = "roundFourText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFourResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundFourResponseTextContainer">
+						<p id = "roundFourResponseText">I want an answer. Not another question.</p>
+					</div>
+				</div>
+
+				<div id = "roundFiveContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundFiveTextContainer">
+						<p id = "roundFiveText"></p>
+					</div>
+				</div>
+
+				<div id = "roundFiveResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundFiveResponseTextContainer">
+						<p id = "roundFiveResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSixContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundSixTextContainer">
+						<p id = "roundSixText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSixResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundSixResponseTextContainer">
+						<p id = "roundSixResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSevenContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundSevenTextContainer">
+						<p id = "roundSevenText"></p>
+					</div>
+				</div>
+
+				<div id = "roundSevenResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundSevenResponseTextContainer">
+						<p id = "roundSevenResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundEightContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundEightTextContainer">
+						<p id = "roundEightText"></p>
+					</div>
+				</div>
+
+				<div id = "roundEightResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundEightResponseTextContainer">
+						<p id = "roundEightResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundNineContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundNineTextContainer">
+						<p id = "roundNineText"></p>
+					</div>
+				</div>
+
+				<div id = "roundNineResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundNineResponseTextContainer">
+						<p id = "roundNineResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTenContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundTenTextContainer">
+						<p id = "roundTenText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTenResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundTenResponseTextContainer">
+						<p id = "roundTenResponseText"></p>
+					</div>
+				</div>
+
+				<div id = "roundElevenContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundElevenTextContainer">
+						<p id = "roundElevenText"></p>
+					</div>
+				</div>
+
+				<div id = "roundElevenResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundElevenResponseTextContainer">
+						<p id = "roundElevenResponseText">Two years ago Empyrean Industries began developing wraiths, a line of sentient AIs hosted within humanoid vessels. The goal was to make them indistinguishable from us, and to that end, Mosaic was never intended to find your perfect match. It's remote usability testing, pairing random users with wraiths and observing the relationship as it unfolds. These people have no idea. You had no idea. Do you understand what I'm saying? Samantha isn't a real person. You were next. These wraiths, they look like us and they speak like us, but they are NOT like us. They're living, breathing weapons and they're starting to lash out. People are dying. Empyrean is covering it all up. They think these accidents are just bugs they can fix. They are wrong.</p>
+					</div>
+				</div>
+
+				<div id = "roundTwelveContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundTwelveTextContainer">
+						<p id = "roundTwelveText"></p>
+					</div>
+				</div>
+
+				<div id = "roundTwelveResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundTwelveResponseTextContainer">
+						<a onClick = "playInterrogation();"><div id="audioImgContainer"><img id="audioImg" src="img/play.png"/></div></a>
+					</div>
+				</div>
+
+				<div id = "roundThirteenContainer">
+					<h1 class = "myName">ME</h1>
+					<div id = "roundThirteenTextContainer">
+						<p id = "roundThirteenText"></p>
+					</div>
+				</div>
+
+				<div id = "roundThirteenResponseContainer">
+					<h1 class = "username">UNKNOWN</h1>
+					<div id = "roundThirteenResponseTextContainer">
+						<p id = "roundThirteenResponseText">I want you to take a breath. Because in a few moments, you're going to help me take a life. I have a mission for you.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div id = "optionsContainer">
+				
+				<a OnClick = "selectFirst()">
+					<div id = "firstOptionContainer">
+						<p id="firstOption">Samantha?</p>
+					</div>
+				</a>
+
+				<a OnClick = "selectSecond()">
+					<div id = "secondOptionContainer">
+						<p id="secondOption">Hello?</p>
+					</div>
+				</a>
+
+				<div id = "typingContainer">
+					<p>UNKNOWN IS TYPING...</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
